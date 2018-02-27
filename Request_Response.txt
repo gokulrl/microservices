@@ -1,0 +1,194 @@
+1) Inactive Item:
+
+URL:
+----
+https://services-qa.walgreens.com/api2/cart/addToCart/v1
+
+Request:
+--------
+{
+    "apiKey":"rAZfRdDGaq4Wt0uocDzsqfpRXXRRCJQ9",
+    "clientId":"NQ3rPTI4L_XLJv7JzDQmNpAX_a-VQxHx1A5USim50b6srjc1IuEvltIlghuOD303JjVkeY4U_v5YQNaDJDEw6uyP45BODqHfhQjn9W0NFBDsXj2-idj4XIn05911v1tO2m3puuWmr32noHG2m4yyjbagtUJMVz4g9MiGCQC3W1Ywz3Ql6ElP-rKzKMyTL4R2COeEGqrqQAcS_O7Mbs0-gaV1KxsJFhZW0LcWO_hGizCjb7LMpe2gAkpO6z6mEwXMgATJOxSQ4rbKTL_GkDfMnT1nqyj8X6kNRk3fl4gQA9RyIIhsnxgmmPvm9vLvlIrKgIkVez6EIakMmolwJoDj3Q==",
+    "affId":"a2ctest",
+    "clientCartId":"111111",
+    "products":[
+        {
+            "skuId":"sku6051865",
+            "qty":"1",
+            "type":"DL"
+        },
+        {
+            "skuId":"sku5919686",
+            "qty":"1",
+            "type":"DL"
+        }
+    ]
+}
+
+Response:
+----------
+
+{"transferURL":"https://decwb02.walgreens.com:6243/store/checkout/cart_transfer.jsp?action=transfer&cartTransferReferenceId=9zfnjzIcQvjx3ZZgSL06nrDT2Wzvfz9SefLlRaMFa22VGRhlnK0h9AmLrwbSqciT","clientCartId":"111111","items":[{"qtyInCart":1,"skuId":"sku6051865","statusCode":"000"},{"qtyInCart":0,"skuId":"sku5919686","statusCode":"006"}],"cartTransferReferenceId":"MDM1Mzg3NzgwOTI4MTY1MDg1ODgxNA==","statusCode":"902"}
+
+2) OOS Sku:
+
+URL:
+----
+https://services-qa.walgreens.com/api2/cart/addToCart/v1
+
+Request:
+--------
+
+{
+    "apiKey":"rAZfRdDGaq4Wt0uocDzsqfpRXXRRCJQ9",
+    "clientId":"NQ3rPTI4L_XLJv7JzDQmNpAX_a-VQxHx1A5USim50b6srjc1IuEvltIlghuOD303JjVkeY4U_v5YQNaDJDEw6uyP45BODqHfhQjn9W0NFBDsXj2-idj4XIn05911v1tO2m3puuWmr32noHG2m4yyjbagtUJMVz4g9MiGCQC3W1Ywz3Ql6ElP-rKzKMyTL4R2COeEGqrqQAcS_O7Mbs0-gaV1KxsJFhZW0LcWO_hGizCjb7LMpe2gAkpO6z6mEwXMgATJOxSQ4rbKTL_GkDfMnT1nqyj8X6kNRk3fl4gQA9RyIIhsnxgmmPvm9vLvlIrKgIkVez6EIakMmolwJoDj3Q==",
+    "affId":"a2ctest",
+    "clientCartId":"111111",
+    "products":[
+        {
+            "skuId":"sku6051865",
+            "qty":"1",
+            "type":"DL"
+        },
+        {
+            "skuId":"sku309061",
+            "qty":"1",
+            "type":"DL"
+        }
+    ]
+}
+
+Response:
+---------
+
+{"transferURL":"https://decwb02.walgreens.com:6243/store/checkout/cart_transfer.jsp?action=transfer&cartTransferReferenceId=nsLUNQEhrXK9Tu-whp7JoA-Mi1sXFequ2Rb-9FeuUY0k6nnQ5JsnjeaB1wxe5Jbh","clientCartId":"111111","items":[{"qtyInCart":1,"skuId":"sku6051865","statusCode":"000"},{"qtyInCart":0,"skuId":"sku309061","statusCode":"001"}],"cartTransferReferenceId":"NDM1MzM3Mjg1OTU4NTYxMDk1Nzg0NA==","statusCode":"902"}
+
+3) Purchase limit:
+
+URL:
+----
+https://services-qa.walgreens.com/api2/cart/addToCart/v1
+
+Request:
+--------
+
+{
+    "apiKey":"rAZfRdDGaq4Wt0uocDzsqfpRXXRRCJQ9",
+    "clientId":"NQ3rPTI4L_XLJv7JzDQmNpAX_a-VQxHx1A5USim50b6srjc1IuEvltIlghuOD303JjVkeY4U_v5YQNaDJDEw6uyP45BODqHfhQjn9W0NFBDsXj2-idj4XIn05911v1tO2m3puuWmr32noHG2m4yyjbagtUJMVz4g9MiGCQC3W1Ywz3Ql6ElP-rKzKMyTL4R2COeEGqrqQAcS_O7Mbs0-gaV1KxsJFhZW0LcWO_hGizCjb7LMpe2gAkpO6z6mEwXMgATJOxSQ4rbKTL_GkDfMnT1nqyj8X6kNRk3fl4gQA9RyIIhsnxgmmPvm9vLvlIrKgIkVez6EIakMmolwJoDj3Q==",
+    "affId":"a2ctest",
+    "clientCartId":"111111",
+    "products":[
+        {
+            "skuId":"sku6051865",
+            "qty":"40",
+            "type":"DL"
+        }
+    ]
+}
+
+Response:
+----------
+
+{"transferURL":"https://decwb02.walgreens.com:6243/store/checkout/cart_transfer.jsp?action=transfer&cartTransferReferenceId=F1URP44sgv_rM8uKEDKmdGJNxvN5FpxI6igPoQhHKWBxTu-DFYAEqcVONNNd8YJA","clientCartId":"111111","items":[{"qtyInCart":36,"skuId":"sku6051865","statusCode":"005"}],"cartTransferReferenceId":"NjM5MzY3NzgyOTQ4NTY4MDU1NTg5NA==","statusCode":"902"}
+
+4) Quantity Adjusted:
+
+URL:
+----
+https://services-qa.walgreens.com/api2/cart/addToCart/v1
+
+Request:
+---------
+
+{
+    "apiKey":"rAZfRdDGaq4Wt0uocDzsqfpRXXRRCJQ9",
+    "clientId":"NQ3rPTI4L_XLJv7JzDQmNpAX_a-VQxHx1A5USim50b6srjc1IuEvltIlghuOD303JjVkeY4U_v5YQNaDJDEw6uyP45BODqHfhQjn9W0NFBDsXj2-idj4XIn05911v1tO2m3puuWmr32noHG2m4yyjbagtUJMVz4g9MiGCQC3W1Ywz3Ql6ElP-rKzKMyTL4R2COeEGqrqQAcS_O7Mbs0-gaV1KxsJFhZW0LcWO_hGizCjb7LMpe2gAkpO6z6mEwXMgATJOxSQ4rbKTL_GkDfMnT1nqyj8X6kNRk3fl4gQA9RyIIhsnxgmmPvm9vLvlIrKgIkVez6EIakMmolwJoDj3Q==",
+    "affId":"a2ctest",
+    "clientCartId":"111111",
+    "products":[
+        {
+            "skuId":"sku6051865",
+            "qty":"1",
+            "type":"DL"
+        },
+        {
+            "skuId":"sku6218664",
+            "qty":"5",
+            "type":"DL"
+        }
+    ]
+}
+
+Response:
+---------
+
+{"transferURL":"https://decwb02.walgreens.com:6243/store/checkout/cart_transfer.jsp?action=transfer&cartTransferReferenceId=Cvxyu8_fWdvGsUUYVhMUvXkkc1q0KLkBxvNE6Rd2HEMkXFjF4ygASx0LATasQdG0","clientCartId":"111111","items":[{"qtyInCart":1,"skuId":"sku6051865","statusCode":"000"},{"qtyInCart":3,"skuId":"sku6218664","statusCode":"002"}],"cartTransferReferenceId":"MTM3Mzg3ODg3OTY4OTYzMDE1ODg5NA==","statusCode":"902"}
+
+5) Available only in store
+
+URL:
+----
+
+https://services-qa.walgreens.com/api2/cart/addToCart/v1
+
+Request:
+---------
+
+{
+    "apiKey":"rAZfRdDGaq4Wt0uocDzsqfpRXXRRCJQ9",
+    "clientId":"NQ3rPTI4L_XLJv7JzDQmNpAX_a-VQxHx1A5USim50b6srjc1IuEvltIlghuOD303JjVkeY4U_v5YQNaDJDEw6uyP45BODqHfhQjn9W0NFBDsXj2-idj4XIn05911v1tO2m3puuWmr32noHG2m4yyjbagtUJMVz4g9MiGCQC3W1Ywz3Ql6ElP-rKzKMyTL4R2COeEGqrqQAcS_O7Mbs0-gaV1KxsJFhZW0LcWO_hGizCjb7LMpe2gAkpO6z6mEwXMgATJOxSQ4rbKTL_GkDfMnT1nqyj8X6kNRk3fl4gQA9RyIIhsnxgmmPvm9vLvlIrKgIkVez6EIakMmolwJoDj3Q==",
+    "affId":"a2ctest",
+    "clientCartId":"111111",
+    "products":[
+        {
+            "skuId":"sku6051865",
+            "qty":"1",
+            "type":"DL"
+        },
+        {
+            "skuId":"sku6227542",
+            "qty":"5",
+            "type":"DL"
+        }
+    ]
+}
+
+Response:
+---------
+
+{"transferURL":"https://decwb02.walgreens.com:6243/store/checkout/cart_transfer.jsp?action=transfer&cartTransferReferenceId=shmrwqkQmaOcVxCcXWceNn6D6G9593XMEtI34i9tiTz4r0Le4nYhIyrBGlfirxIp","clientCartId":"111111","items":[{"qtyInCart":1,"skuId":"sku6051865","statusCode":"000"},{"qtyInCart":0,"skuId":"sku6227542","statusCode":"004"}],"cartTransferReferenceId":"ODMxMzc3OTg0OTI4NzY3MDM1NTgyNA==","statusCode":"902"}
+
+
+6) Invalid data at item level
+
+URL:
+----
+
+https://services-qa.walgreens.com/api2/cart/addToCart/v1
+
+Request:
+--------
+
+{
+    "apiKey":"rAZfRdDGaq4Wt0uocDzsqfpRXXRRCJQ9",
+    "clientId":"NQ3rPTI4L_XLJv7JzDQmNpAX_a-VQxHx1A5USim50b6srjc1IuEvltIlghuOD303JjVkeY4U_v5YQNaDJDEw6uyP45BODqHfhQjn9W0NFBDsXj2-idj4XIn05911v1tO2m3puuWmr32noHG2m4yyjbagtUJMVz4g9MiGCQC3W1Ywz3Ql6ElP-rKzKMyTL4R2COeEGqrqQAcS_O7Mbs0-gaV1KxsJFhZW0LcWO_hGizCjb7LMpe2gAkpO6z6mEwXMgATJOxSQ4rbKTL_GkDfMnT1nqyj8X6kNRk3fl4gQA9RyIIhsnxgmmPvm9vLvlIrKgIkVez6EIakMmolwJoDj3Q==",
+    "affId":"a2ctest",
+    "clientCartId":"111111",
+    "products":[
+        {
+            "skuId":"sku6051865",
+            "qty":"1",
+            "type":"DL"
+        },
+        {
+            "skuId":"sku1234",
+            "qty":"5",
+            "type":"DL"
+        }
+    ]
+}
+
+Response:
+----------
+
+{"transferURL":"https://decwb02.walgreens.com:6243/store/checkout/cart_transfer.jsp?action=transfer&cartTransferReferenceId=22uaUVixWK-YY8dnfMt2L44LZfy9-n_uy_2GpvBKwEDr5K-1nZh1dvcWFU6qSIuf","clientCartId":"111111","items":[{"qtyInCart":1,"skuId":"sku6051865","statusCode":"000"},{"qtyInCart":0,"skuId":"sku1234","statusCode":"003"}],"cartTransferReferenceId":"MDMyMzQ3Nzg3OTg4NTY2MDg1NzgzNA==","statusCode":"902"}
